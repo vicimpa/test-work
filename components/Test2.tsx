@@ -61,7 +61,7 @@ export const getDefault = () => {
 
   for (let d of test2state.get()) {
     const meClass = M.MarineLife.allClasses.find(e => {
-      return e.name.indexOf(d.className) !== -1
+      return e.name == d.className
     })
 
     if (!meClass) {
