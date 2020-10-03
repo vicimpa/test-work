@@ -1,5 +1,5 @@
 import { useEffect, useState, Dispatch } from "react";
-import { copy } from "./Utils";
+import { copy } from "./CopyObject";
 
 function loadStorage<T = any>(store: string): T {
   if(!store)
