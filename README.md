@@ -12,4 +12,4 @@
 > npm run publish
 ```
 
-## Есть онлайн [тут](https://vicimpa.github.com/test-work)
+## Есть онлайн [тут](https://vicimpa.github.io/test-work)
