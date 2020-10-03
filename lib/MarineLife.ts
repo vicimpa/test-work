@@ -19,14 +19,16 @@ export class MarineLife {
   }
 
   bite() {
-    if(this.isCanBite)
+    if (this.isCanBite)
       return 'Bite'
   }
 
   swim() {
-    if(this.isCanSwim)
+    if (this.isCanSwim)
       return 'Swim'
   }
+
+  static allClasses: Array<typeof MarineLife> = []
 }
 
 export class MarineShark extends MarineLife {
@@ -52,3 +54,10 @@ export class MarineStarfish extends MarineLife {
     super('Starfish', true, false)
   }
 }
+
+MarineLife.allClasses.push(
+  MarineShark,
+  MarineTurtle,
+  MarineJellyfish,
+  MarineStarfish
+)
