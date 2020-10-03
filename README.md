@@ -5,6 +5,7 @@
 > npm install
 > npm run start-dev
 ```
+
 ## Для сборки и публикации
 ```bash
 > npm install
