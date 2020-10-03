@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     width: 100,
   },
   button: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(1)
   },
   control: {
     padding: theme.spacing(2),
@@ -110,14 +110,16 @@ export const Test2Component = () => {
       <Grid item xs={3}>
         {M.MarineLife.allClasses.map(e => {
           return (
-            <Button
-              key={e.name}
-              variant="contained"
-              color="primary"
-              className={classes.button}
-              onClick={() => add(e)}
-              startIcon={<AddIcon />}
-            > Add {e.className.replace('Marine', '')} </Button>
+            <Fragment key={e.name}>
+              <Button
+                variant="contained"
+                color="primary"
+                className={classes.button}
+                onClick={() => add(e)}
+                startIcon={<AddIcon />}
+              > Add {e.className.replace('Marine', '')} </Button>
+              <br />
+            </Fragment>
           )
         })}
       </Grid>
