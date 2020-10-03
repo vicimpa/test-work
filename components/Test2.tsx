@@ -61,7 +61,7 @@ export const getDefault = () => {
 
   for (let d of test2state.get()) {
     const meClass = M.MarineLife.allClasses.find(e => {
-      return e.name == d.className
+      return e.className == d.className
     })
 
     if (!meClass) {
@@ -115,15 +115,13 @@ export const Test2Component = () => {
               className={classes.button}
               onClick={() => add(e)}
               startIcon={<AddIcon />}
-            > Add {e.name.replace('Marine', '')} </Button>
+            > Add {e.className.replace('Marine', '')} </Button>
           )
         })}
       </Grid>
       <Grid item xs={8}>
         <List className={classes.root2}>
           {state.map((e, i, t) => {
-            const isLast = t.length - 1 == i
-
             return (
               <ListItem key={`l-${i}`} alignItems="flex-start">
                 <ListItemAvatar>
@@ -144,7 +142,7 @@ export const Test2Component = () => {
                         className={classes.inline}
                         color="textPrimary"
                       >
-                        Class: {e['constructor'].name}
+                        Class: {e.className}
                       </Typography>
                       {` — can swim: ${e.isCanSwim}, can bite: ${e.isCanBite}`}
 

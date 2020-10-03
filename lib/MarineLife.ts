@@ -3,9 +3,10 @@ export class MarineLife {
   #canSwim = true
   #canBite = false
 
-  get className() { return 'MarineLife' }
+  static get className() { return 'MarineLife' }
 
   get name() { return this.#name }
+  get className() { return this['constructor']['className'] }
 
   get isCanSwim() { return this.#canSwim }
   get isCanBite() { return this.#canBite }
@@ -34,7 +35,7 @@ export class MarineLife {
 }
 
 export class MarineShark extends MarineLife {
-  get className() { return 'MarineShark' }
+  static get className() { return 'MarineShark' }
 
   constructor() {
     super('Shark', true, true)
@@ -42,7 +43,7 @@ export class MarineShark extends MarineLife {
 }
 
 export class MarineTurtle extends MarineLife {
-  get className() { return 'MarineTurtle' }
+  static get className() { return 'MarineTurtle' }
 
   constructor() {
     super('Turtle', true, true)
@@ -50,7 +51,7 @@ export class MarineTurtle extends MarineLife {
 }
 
 export class MarineJellyfish extends MarineLife {
-  get className() { return 'MarineJellyfish' }
+  static get className() { return 'MarineJellyfish' }
 
   constructor() {
     super('Jellyfish', true, false)
@@ -58,7 +59,7 @@ export class MarineJellyfish extends MarineLife {
 }
 
 export class MarineStarfish extends MarineLife {
-  get className() { return 'MarineStarfish' }
+  static get className() { return 'MarineStarfish' }
 
   constructor() {
     super('Starfish', true, false)
