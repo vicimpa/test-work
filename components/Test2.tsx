@@ -127,7 +127,7 @@ export const Test2Component = () => {
             return (
               <ListItem key={`l-${i}`} alignItems="flex-start">
                 <ListItemAvatar>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                  <Avatar alt={e.display()} src={`static/fish/${e.display()}`} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={(
