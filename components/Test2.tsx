@@ -14,6 +14,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import Delete from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
+import { Counter } from "../lib/Counter";
 
 interface ISave {
   className: string
@@ -91,6 +92,7 @@ export const saveDefault = (state: M.MarineLife[]) => {
 export const Test2Component = () => {
   const [state, setState] = useState(getDefault())
   const classes = useStyles()
+  const counter = new Counter()
 
   const add = (e: typeof M.MarineLife) => {
     setState([...state, new e])
@@ -123,7 +125,7 @@ export const Test2Component = () => {
         <List className={classes.root2}>
           {state.map((e, i, t) => {
             return (
-              <ListItem key={`l-${i}`} alignItems="flex-start">
+              <ListItem key={`l-${counter.add(e.className)}`} alignItems="flex-start">
                 <ListItemAvatar>
                   <Avatar alt={e.display()} src={`static/fish/${e.display()}`} />
                 </ListItemAvatar>
