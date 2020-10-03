@@ -3,3 +3,5 @@ package-lock.json
 dist/*
 !.empty
 .DS_Store
+.tmp
+publish

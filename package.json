@@ -7,7 +7,9 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start-dev": "webpack-dev-server"
+    "start-dev": "webpack-dev-server",
+    "build": "webpack --prod",
+    "publish": "ts-node build.ts"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
