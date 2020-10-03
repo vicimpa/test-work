@@ -113,7 +113,7 @@ export const MainComponent = ({ history }: IProps) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Responsive drawer
+            Test WORK
           </Typography>
         </Toolbar>
       </AppBar>
