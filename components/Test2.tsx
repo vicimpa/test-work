@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const test2state = createShareStore<ISave[]>([], 'test2-store')
+export const test2state = createShareStore<ISave[]>([], 'test2-stores')
 
 export const getDefault = () => {
   const array: M.MarineLife[] = []
@@ -80,7 +80,7 @@ export const saveDefault = (state: M.MarineLife[]) => {
 
   for (let d of state) {
     setState.push({
-      className: d.name,
+      className: d.className,
       data: [d.isCanSwim, d.isCanBite]
     })
   }

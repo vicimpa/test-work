@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 export const test1State = createShareStore({
   input: '0',
   format: BinFormats.INT8
-}, 'test1-store')
+}, 'test1-stores')
 
 export const Test1Component = () => {
   const classes = useStyles();
