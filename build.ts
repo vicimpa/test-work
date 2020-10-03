@@ -14,7 +14,7 @@ fs.mkdirSync('.tmp/static')
 fs.copyFileSync('index.html', '.tmp/index.html')
 fs.copyFileSync('dist/main.js', '.tmp/dist/main.js')
 
-child.spawnSync('cp', ['-R', 'static', '.tmp/static'])
+child.spawnSync('cp', ['-R', 'static', '.tmp'])
 child.spawnSync('find', ['-n', '.DS_Store', '-exec', 'rm', '{}', '\\;', '.tmp'])
 
 child.spawnSync('mv', ['.tmp', 'publish'])
