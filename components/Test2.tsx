@@ -124,8 +124,11 @@ export const Test2Component = () => {
       <Grid item xs={8}>
         <List className={classes.root2}>
           {state.map((e, i, t) => {
+            let { className } = e
+            className += `-${counter.add(className)}`
+
             return (
-              <ListItem key={`l-${counter.add(e.className)}`} alignItems="flex-start">
+              <ListItem key={`l-${className}`} alignItems="flex-start">
                 <ListItemAvatar>
                   <Avatar alt={e.display()} src={`static/fish/${e.display()}`} />
                 </ListItemAvatar>
