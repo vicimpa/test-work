@@ -20,7 +20,7 @@ export function bin2dec(input: any, format = BinFormats.INT8) {
   if(format == undefined || format == null)
     return inputNumber
 
-  if(typeof format != 'number')
+  if(typeof format != 'number' && isNaN(+format))
     format = BinFormats[format] as any
 
   if(!BinClasses[format])
